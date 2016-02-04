@@ -1,0 +1,64 @@
+var seneca = require('seneca')();
+// var mongoose = require('mongoose');
+
+seneca.client({
+  host: '127.0.0.1',
+  port: 8000,
+  pin: 'module:transaction'
+});
+
+module.exports.postTransaction = function(request, reply) {
+  seneca.act({
+    module: 'transaction',
+    cmd: 'postTransaction',
+    payload: request.payload,
+  }, function(err, result) {
+    if (err) {
+      return reply(err);
+    } else {
+      return reply(null, result);
+    }
+  });
+}
+
+module.exports.getTransaction = function(request, reply) {
+  seneca.act({
+    module: 'transaction',
+    cmd: 'getTransaction',
+    payload: request.payload,
+  }, function(err, result) {
+    if (err) {
+      return reply(err);
+    } else {
+      return reply(null, result);
+    }
+  });
+}
+
+module.exports.getTransactions = function(request, reply) {
+  seneca.act({
+    module: 'transaction',
+    cmd: 'getTransactions',
+    payload: request.payload,
+  }, function(err, result) {
+    if (err) {
+      return reply(err);
+    } else {
+      return reply(null, result);
+    }
+  });
+}
+
+module.exports.getTransactionsDouble = function(request, reply) {
+  seneca.act({
+    module: 'transaction',
+    cmd: 'getTransactionsDouble',
+    payload: request.payload,
+  }, function(err, result) {
+    if (err) {
+      return reply(err);
+    } else {
+      return reply(null, result);
+    }
+  });
+}
