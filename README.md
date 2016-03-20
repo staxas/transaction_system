@@ -37,8 +37,8 @@ Return all transactions.
 
 ##### GET /api/transactions/{search}
 
-If no query is given, or the query 'findBy=id' is given, search for a single transaction by its unique databse id. If the query 'findBy=sourceUser' is given, where sourceUserId is the the unique database id of a user which is a data property of tranasction database entry, these entry/entries are returned. The same goes for the query 'findBy=targetUser' except now the target user property is being searched for in the database. The 'findBy=status' query searches for transactions with a certain status, be it 'hold', 'completed' or 'canceled'. Returns one or more transaction database records.
+If no query is given, or the query 'findBy=id' is given, search for a single transaction by its unique databse id. If the query 'findBy=sourceUser' is given, where {search} is the the unique database id of a user which is a data property of tranasction database entry, these entry/entries are returned. The same goes for the query 'findBy=targetUser' except now the target user property is being searched for in the database. The 'findBy=status' query searches for transactions with a certain status, be it 'hold', 'completed' or 'canceled'. Returns one or more transaction database records.
 
 ##### GET /api/transactions/{search1}/{search2}
 
-See above endpoint and request. Here, two possible search properties can be given. Example query: 'findBy=sourceUser&andBy=status'. Returns one or more database records.
+See above endpoint and request. Here, two possible search properties can be given, allowing refined search capabilities. Example query: 'findBy=sourceUser&andBy=status'. Returns one or more database records.
