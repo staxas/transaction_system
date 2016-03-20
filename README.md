@@ -3,7 +3,7 @@
 Allows users to create transactions, and either complete/commit or cancel these transactions. Transaction amounts on hold are removed from source user's account and placed in a waiting queue. On setting the transaction to either 'completed' or 'hold' these funds are either sent to the target user or returned to the source user.
 
 Install dependancies with
-*npm install --save*
+#####npm install --save
 
 Server and database URLs and ports: edit config.js accordingly.
 
