@@ -25,7 +25,7 @@ If endpoint contains an id, a specific user will be searched for. If no query is
 
 ##### POST /api/transactions
 
-Create a new transaction. Payload must contain *sourceUser* and *targetUser* properties (which are unique ids of user database entries) and an *amount* property.  Returns transaction database record.
+Create a new transaction. Payload must contain *sourceUser* and *targetUser* properties (which are unique ids of user database entries) and an *amount* property. *amount* may not be more than the current amount in the user's account. Returns transaction database record.
 
 ##### PUT /api/transactions
 
