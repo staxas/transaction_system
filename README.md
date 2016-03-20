@@ -3,7 +3,7 @@
 Allows users to create transactions, and either complete/commit or cancel these transactions. Transaction amounts on hold are removed from source user's account and placed in a waiting queue. On setting the transaction to either 'completed' or 'hold' these funds are either sent to the target user or returned to the source user.
 
 Install dependancies with
-##### npm install --save
+*npm install --save*
 
 Server and database URLs and ports: edit config.js accordingly.
 
@@ -15,7 +15,7 @@ Create a new user
 
 ##### GET /api/users
 
-Get database entry of all users
+Get database entries of all users
 
 ##### GET /api/users/{id}
 
@@ -23,7 +23,7 @@ If endpoint contains an id, a specific user will be searched for. If no query is
 
 ##### POST /api/transactions
 
-Create a new transaction. Payload must contain 'sourceUser' and 'targetUser' properties (which are unique ids of user database entries) and an amount property.
+Create a new transaction. Payload must contain 'sourceUser' and 'targetUser' properties (which are unique ids of user database entries) and an 'amount' property.
 
 ##### PUT /api/transactions
 
@@ -35,7 +35,7 @@ Return all transactions
 
 ##### GET /api/transactions/{search}
 
-If no query is given, or the query 'findBy=id' is given, search for a single transaction by its unique databse id. If the query 'findBy=sourcUser' is giver, where sourceUserId is the the unique database id of a user which is a data property of tranasction database entry, these entry/entries are returned. The same goes for the query 'findBy=targetUser' except now the target user property is being searched in the database. The 'findBy=status' query searched for transactions with a certain status, be it 'hold', 'completed' or 'canceled'.
+If no query is given, or the query 'findBy=id' is given, search for a single transaction by its unique databse id. If the query 'findBy=sourceUser' is given, where sourceUserId is the the unique database id of a user which is a data property of tranasction database entry, these entry/entries are returned. The same goes for the query 'findBy=targetUser' except now the target user property is being searched for in the database. The 'findBy=status' query searches for transactions with a certain status, be it 'hold', 'completed' or 'canceled'.
 
 ##### GET /api/transactions/{search1}/{search2}
 
