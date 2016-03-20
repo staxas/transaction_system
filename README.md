@@ -1,6 +1,6 @@
 #transaction_system
 
-Allows users to create transactions, and either complete/commit or cancel these transactions. Transaction amounts on hold are removed from source user's account and placed in a waiting queue. On setting the transaction to either 'completed' or 'hold' these funds are either sent to the target user or returned to the source user. Requires MongoDB.
+Allows users to create transactions, and either complete/commit or cancel these transactions. Transaction amounts on hold are removed from source user's account and placed in a waiting queue. On setting the transaction to either 'completed' or 'canceled' these funds are either sent to the target user or returned to the source user. Requires MongoDB.
 
 Install dependancies with
 ```bash
